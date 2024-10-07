@@ -1,3 +1,14 @@
 <div>
-    {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
+
+    <h1>Meu componente livewire</h1>
+
+    <input wire:model.live="search" />
+
+    <br>
+
+    <ul>
+        @foreach($users as $user)
+        <li>{{ $user->name }}</li>
+        @endforeach
+    </ul>
 </div>
