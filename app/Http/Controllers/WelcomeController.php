@@ -2,12 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
 
 class WelcomeController extends Controller
 {
-    public function __invoke(Request $request)
+    public function index()
     {
+        $user = User::query()->create([
+            'name' => 'Gabriel',
+            'email' => 'Gabe@gmail.com',
+            'password' => '12345678'
+        ]);
+
+        dd($user);
+
         return view('welcome');
     }
 }
