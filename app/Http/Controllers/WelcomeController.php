@@ -8,13 +8,11 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $user = User::query()->create([
-            'name' => 'Gabriel',
-            'email' => 'Gabe@gmail.com',
-            'password' => '12345678'
-        ]);
-
-        dd($user);
+        $user = User::find(1);
+        $user->email_verified_at = now();
+        $user->save();
+        $user->update(['email_verified_at' => now()]);
+        dd($user->email_verified_at);
 
         return view('welcome');
     }
