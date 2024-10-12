@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Projects;
 
+use App\Models\Project;
 use Livewire\Component;
-use  App\Models\Project;
 
 class Show extends Component
 {

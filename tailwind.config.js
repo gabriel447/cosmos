@@ -5,10 +5,11 @@ export default {
   ],
   theme: {
     extend: {
-      font:  {
-        'sans': ['Segoe UI', 'sans-serif'],
-        },
+      font: {
+        sans: ['Segoe UI', 'sans-serif'],
+      }
     },
   },
   plugins: [],
 }
+
